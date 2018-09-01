@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05. 属性选择器</title>
+  <style>
+    div{
+      width: 300px;
+      height: 200px;
+      border: 3px solid red;
+    }
+    /* 与p拥有共同父级，并在p之后的所有ul */
+    p~ul{
+      background-color: green;
+    }
+
+    /* 与p拥有共同父级，并在p之后的所有ul */
+    p+ul{
+      background-color: pink;
+    }
+
+
+    /* 属性选择器，可参考正则表达式来理解 */
+    /* 查找a标签中具有href属性，且属性值以P开头的标签 */
+    a[href^="P"]{
+      background-color: yellow;
+    }
+    /* 查找的a标签中具有href属性，且属性值以mp4结尾的标签 */
+    a[href$="mp4"]{
+      background-color: deeppink;
+    }
+    /* 查找具有href属性，并且值包含l的标签 */
+    a[href*="l"]{
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+<div class="cls">
+  <p>床前明月光，疑是地上霜。</p>
+
+  <ul>
+    <li><a href="Paneama.mp3">Panama.mp3</a></li>
+    <li><a href="That Girl.mp3">That Girl.mp3</a></li>
+    <li><a href="风的季节.mp3">风的季节.mp3</a></li>
+    <li><a href="Es Rappelt Im Karton.mp3">Es Rappelt Im Karton.mp3</a></li>
+    <li><a href="HandClap.mp4">HandClap.mp4</a></li>
+  </ul>
+
+<ul>
+  <li>足球</li>
+</ul>
+</div>
+<ul>
+  <li>世界杯</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>11. transition过渡</title>
+  <style>
+    /* 过渡就是设定元素的开始和结束状态，以及动画的延迟、持续时间、动画速度曲线后，中间过程由浏览器自动处理形成的动画。 */
+    .cls{
+      width: 200px;
+      height: 200px;
+      background-color: green;
+
+      /* transition: property duration timing-function delay; 过渡属性，执行一次性的过渡动画 */
+
+      /* transition-property 需要过渡的属性，all表示所有属性 */
+      transition-property: all;
+      
+      /* transition-duration 执行动画的时间 */
+      transition-duration: 2s;
+      
+      /* transition-timing-function 动画执行速度曲线，支持linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n) */
+      transition-timing-function: linear;
+
+      /* transition-delay 延迟执行动画的时间 */
+      transition-delay: 1s;
+    }
+    .cls:hover{
+      width: 300px;
+      height: 300px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+<div class="cls"></div>
+
+</body>
+</html>

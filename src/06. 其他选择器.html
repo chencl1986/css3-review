@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>06. 其他选择器</title>
+  <style>
+    /*目标选择器，点击a，找到id为four的p标签，找到后改变背景颜色*/
+    p:target{
+      background-color: orangered;
+    }
+
+    /*设置选中的内容后，改变背景颜色*/
+    p::selection{
+      background-color: yellow;
+    }
+
+
+    /* 为非p标签设置属性 */
+    :not(p) {
+      border: 1px solid green;
+    }
+
+
+    div{
+      width: 200px;
+      height: 150px;
+      border: 3px solid red;
+    }
+
+    /*设置第一个文字的样式*/
+    div:first-letter{
+      font-size: 30px;
+      color: yellow;
+    }
+
+    /*设置第一行的文字样式*/
+    div:first-line{
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+<p>第一个p标签</p>
+<p>第二个p标签</p>
+<p>第三个p标签</p>
+<p id="four">第四个p标签</p>
+<p>第五个p标签</p>
+<a href="#four">跳转到第四个p标签</a>
+
+
+<div>
+  Do Not Go Gentle into That Good Night
+</div>
+</body>
+</html>

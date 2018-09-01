@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>09. transform-2D转换</title>
+    <style>
+      .box{
+        width: 600px;
+        height: 500px;
+        background-color: deeppink;
+        margin: 0 auto;
+      }
+      .cls{
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        margin: 0 auto;
+        font-size: 100px;
+        font-family: "全新硬笔行书简";
+        text-align: center;
+      }
+      .box:hover .cls{
+        /* transform 用于设置元素的2d和3d转换，默认为2d */
+
+        /* translate(x, y) 元素相对于原来的位置的偏移 */
+        /* transform: translate(-100px); */
+        /* transform: translate(100px, 100px); */
+
+        /* rotate(angle) 元素相对于z轴旋转 */
+        /* transform: rotate(60deg); */
+
+        /* scale(x[,y]?) 缩小和放大，宽是原来的1.5倍，高是原来0.5倍 */
+        /* transform: scale(1.5, 0.5); */
+
+        /* skew(x-angle,y-angle)相对x轴倾斜30deg，也相对y轴倾斜30deg */
+        /* transform: skew(30deg, 30deg); */
+        
+        /* transform 属性的简写形式 */
+        transform: translate(100px, 100px) rotate(60deg) scale(1.5, 0.5) skew(30deg, 30deg);
+      }
+    </style>
+</head>
+<body>
+<div class="box">
+  <div class="cls">帅</div>
+</div>
+
+</body>
+</html>

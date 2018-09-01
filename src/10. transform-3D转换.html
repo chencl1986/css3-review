@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10. transform-3D转换</title>
+  <style>
+    .box {
+      width: 600px;
+      height: 500px;
+      background-color: pink;
+      margin: 100px auto 0;
+
+      /* perspective: number|none; 元素与视图的距离，即z=0的距离，为正则在屏幕外部。需要设置在父级元素中。 */
+      /* perspective不可为负，为负则在屏幕内部，即无法被观察。 */
+      perspective: 1000px;
+    }
+
+    .cls {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      font-size: 36;
+      line-height: 100px;
+      text-align: center;
+      margin: 0 auto;
+
+      /* transform-style: flat|preserve-3d; 设置transform属性显示为2d或3d。 */
+      transform-style: preserve-3d;
+    }
+
+    .box:hover .cls {
+      /* translate3d(x,y,z) 设置x、y、z轴的偏移，也可分3个轴书写 */
+      /* transform: translate3d(50px, 100px, 150px); */
+      /* transform: translateX(100px); */
+      /* transform: translateY(100px); */
+      /* transform: translateZ(100px); */
+
+      /* rotate3d(x,y,z,angle) 设置x、y、z轴的旋转，也可分3个轴书写 */
+      /* 参考 https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function/rotate3d */
+      /* transform: rotate3d(1, 0, 0, 90deg); */
+      /* transform: rotateX(30deg); */
+      /* transform: rotateY(30deg); */
+      /* transform: rotateZ(30deg); */
+
+      /* scale3d(x,y,z) 设置x、y、z轴的缩放，也可分3个轴书写 */
+      transform: scale3d(2, 2, 2);
+      /* transform: scaleX(2); */
+      /* transform: scaleY(2); */
+      /* scaleZ参考 https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function/scaleZ */
+      /* transform: scaleZ(2); */
+
+      /* skew(x-angle,y-angle)相对x轴倾斜30deg，也相对y轴倾斜30deg */
+      /* transform: skew(30deg, 30deg); */
+      /* transform: skewX(30deg); */
+      /* transform: skewY(30deg); */
+    }
+
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="cls">帅</div>
+</div>
+
+</body>
+</html>

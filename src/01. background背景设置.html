@@ -1,0 +1,54 @@
+</doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01. background背景设置</title>
+  <style>
+    div{
+      width: 300px;
+      height: 200px;
+      background-color: yellow;
+      border: 20px dashed red;
+      color: red;
+      padding: 20px;
+      
+      /* CSS3设置背景的图片的相关属性 */
+      background: url("op.jpg") no-repeat;
+      
+      /* background-origin设置图片从哪里开始显示 */
+
+      /* 图片从padding左上角开始显示的 */
+      /* background-origin: padding-box; */
+      /* 图片从border左上角开始显示 */
+      /* background-origin: border-box; */
+      /* 图片从content左上角开始显示 */
+      background-origin: content-box;
+
+
+      /* background-clip设置图片显示结束的位置 */
+
+      /* 图片显示到padding结束 */
+      /* background-clip: padding-box; */
+      /* 图片显示到border结束 */
+      /* background-clip: border-box; */
+      /* 图片显示到content结束 */
+      background-clip: content-box;
+
+      /* background-size设置背景图大小 */
+
+      /* 图片保持高宽比，并纵向铺满 */
+      /* background-size: cover; */
+      /* 图片保持高宽比，并横向铺满 */
+      /* background-size: contain; */
+      /* 图片显示百分比，横向 纵向 */
+      /* background-size: 100% 100%; */
+      /* 图片显示绝对值，第一个参数为横向，第二个为纵向。第二个不传则为auto，auto表示保持高宽比铺开。 */
+      background-size: 100px 200px;
+    }
+  </style>
+</head>
+<body>
+<div>文字显示在内容区</div>
+
+</body>
+</html>

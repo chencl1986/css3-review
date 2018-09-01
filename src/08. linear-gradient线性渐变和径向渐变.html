@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>08. linear-gradient线性渐变和径向渐变</title>
+  <style>
+    .dv{
+      width: 800px;
+      height: 200px;
+      border: 1px solid red;
+    }
+    p{
+      width: 600px;
+      height: 100px;
+      margin-left: 40px;
+      border: 1px solid green;
+
+      /* background: linear-gradient(direction, color-stop1, color-stop2, ...); 线性渐变 */
+      /* 渐变方向，每一步渐变的颜色（支持px和%），若两步的颜色相同，则不会渐变，形成单色的环 */
+      /* background-image: linear-gradient(to right,yellow,green); */
+      /* background-image: linear-gradient(90deg,yellow,green); */
+
+      background-image: linear-gradient(
+        to left,
+        /* to left top, */
+        /* 135deg, */
+        red 20%,
+        green 40%,
+        blue 60%,
+        pink 80%
+      );
+
+
+      /* background-image: linear-gradient(
+        135deg,
+        red 20%,
+        green 20%,
+        green 40%,
+        blue 40%,
+        blue 60%,
+        pink 60%,
+        pink 80%
+      ); */
+    }
+
+
+    /* 径向渐变 */
+    .cls{
+      width: 300px;
+      height: 300px;
+      border: 1px solid red;
+      margin: 50px auto;
+      border-radius: 50%;
+      /* 显示渐变的半径，原点位置，每一步渐变的颜色（支持px和%），若两步的颜色相同，则不会渐变，形成单色的环 */
+      /* background-image: radial-gradient(100px at center,red,green); */
+      /* background-image: radial-gradient(100px at 10px 150px,red,green); */
+
+
+      background-image: radial-gradient(
+        150px at center,
+        red 10%,
+        green 10%,
+        green 20%,
+        yellow 20%,
+        yellow 30%,
+        pink 30%,
+        pink 40%,
+        blue 40%,
+        blue 50%,
+        orange 50%,
+        orange 60%,
+        yellowgreen 60%,
+        yellowgreen 70%,
+        Aqua 70%,
+        Aqua 80%,
+        Aquamarine 80%,
+        Aquamarine 90%,
+        LightPink 90%,
+        LightPink 100%
+      );
+    }
+  </style>
+</head>
+<body>
+<!--线性渐变-->
+<div class="dv">
+  <p></p>
+</div>
+<!--径向渐变-->
+<div class="cls"></div>
+</body>
+</html>

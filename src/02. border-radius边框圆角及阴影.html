@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02. border-radius边框圆角及阴影</title>
+  <style>
+    div{
+      width: 300px;
+      height: 200px;
+      background-color: pink;
+
+      /* border-radius设置圆角 */
+
+      /* 直接设置四个角的值 */
+      /* border-radius: 50px; */
+
+      /* 按顺时针顺序，从左上开始逐一设置圆角 */
+      border-radius: 10px 20px 30px 40px;
+
+      /* 传入2个参数，第一个表示左上和右下，第二个表示左下和右上 */
+      border-radius: 10px 30px;
+
+      /* 传入3个参数，第一个表示左上，第二个表示左下和右上，第三个表示右下 */
+      border-radius: 10px 20px 30px;
+
+      /* 合阴影box-shadow: h-shadow v-shadow blur spread color inset; */
+
+      /* 可传入多套参数，显示多重阴影 */
+      /*
+        h-shadow	必需的。水平阴影的位置。允许负值
+        v-shadow	必需的。垂直阴影的位置。允许负值
+        blur	可选。模糊距离
+        spread	可选。阴影的大小
+        color	可选。阴影的颜色。在CSS颜色值寻找颜色值的完整列表
+        inset	可选。从外层的阴影（开始时）改变阴影内侧阴影 
+      */
+      box-shadow: 10px 20px 5px 10px blue inset, 20px 10px 10px 5px red ;
+    }
+  </style>
+</head>
+<body>
+<div></div>
+
+</body>
+</html>

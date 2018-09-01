@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03. border-image边框的图片设置</title>
+  <style>
+    div{
+      width: 600px;
+      height: 400px;
+      margin: 100px auto;
+      border: 50px solid blue;
+      background-color: pink;
+
+
+      /* border-image: source slice width outset repeat|initial|inherit; 设置边框显示图片 */
+
+      /* border-image-source引入边框图片 */
+      border-image-source: url("border.png");
+
+
+      /* border-image-slice: number|%|fill; */
+
+      /* fill表示将引入的图片完整显示在边框四角 */
+      /* border-image-slice: fill; */
+
+      /* border-image-slice 表示边框显示占图片的宽度 */
+      /* 值为数字时，即要显示的部分实际的宽度，值的数量和分布同margin */
+      border-image-slice: 360 320 250 300;
+
+      /* 值为百分比时，即要显示的部分在原图的百分比，值的数量和分布同margin */
+      /* border-image-slice: 5% 10% 15% 20%; */
+
+
+      /* border-image-width: px|number|%|auto; 图片的宽度，数字表示比例 */
+      border-image-width: 10px 20px 30px 40px;
+      /* border-image-width: 0.5 1 1.5 2; */
+      /* border-image-width: 10% 20% 30% 40%; */
+
+
+      /* border-image-outset 图片超出边框的距离，支持px和Number，Number表示与border宽度的比例 */
+
+      border-image-outset: 10px 20px 30px 40px;
+      /* border-image-outset: 0 0.5 1 2; */
+
+      
+      /* border-image-repeat: stretch|repeat|round|initial|space|inherit;; */
+
+      /* 四条边的图片会被拉伸 */
+      /* border-image-repeat: stretch; */
+
+      /* 图片平铺，若图片无法完整显示，则会被裁剪 */
+      /* border-image-repeat: repeat; */
+
+      /* 图片平铺，若图片无法完整显示，则会自动缩放 */
+      border-image-repeat: round;
+
+      /* 图片平铺，若图片无法完整显示，则只显示四个角，其余空白 */
+      /* border-image-repeat: space; */
+    }
+  </style>
+</head>
+<body>
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>07. 结构伪类选择器</title>
+  <style>
+    ul{
+      cursor: pointer;
+      list-style-type: none;
+    }
+    li{
+      border: 1px solid red;
+      width: 500px;
+    }
+    /* 所有的li中的第一个 */
+    li:first-child{
+      background-color: green;
+    }
+    /* 最后一个li */
+    li:last-child{
+      background-color: yellow;
+    }
+    /* 第三个li */
+    li:nth-child(3){
+      background-color: orange;
+    }
+    /* 倒数第五个li */
+    li:nth-last-child(5){
+      background-color: red;
+    }
+    /* 选择奇数或偶数标签，odd为奇数，even偶偶数 */
+    li:nth-child(odd){
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>14. flex弹性布局子元素属性</title>
+  <style>
+    .box{
+      width: 400px;
+      height: 400px;
+      border: 1px solid red;
+      display: flex;/*设置为可伸缩的父级元素*/
+      flex-wrap: wrap;
+    }
+    .dv1{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+
+      /* 参考 http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html */
+
+      /* order 定义子元素排列顺序，越小越靠前。 */
+      /* order: 2; */
+
+      /* flex: flex-grow flex-shrink flex-basis|auto|initial|inherit; */
+      /* flex: 1 1 auto; */
+
+      /* flex-grow 规定各元素之间的相对比例，若某元素为2，其他元素为1，则该元素宽度为其他元素2倍。 */
+      flex-grow: 1;
+      
+      /* flex-shrink 定义了在元素占满父元素时，若宽度小于元素原始设置宽度时，元素的缩放比例。
+         为0则表示元素保持设定的宽度（为flex-basis的值，若flex-basis设置为auto，则为元素本身的宽或高）不进行缩小。 */
+      flex-shrink: 1;
+
+      /* flex-basis 定义了各元素在按照flex-grow值分配空间之后，比其他元素多占用的空间值。
+         例如按flex-grow分配空间之后，每个元素占用100px，而该元素会占用200px。 */
+      flex-basis: auto;
+      /* flex-basis: 150px; */
+
+      /* align-self: auto|stretch|center|flex-start|flex-end|baseline|initial|inherit; */
+      /* 设置单个元素的对齐方式，效果同align-items。 */
+      /* align-self: auto; */
+      /* align-self: stretch; */
+      align-self: center;
+      /* align-self: flex-start; */
+      /* align-self: flex-end; */
+      /* align-self: baseline; 在设置了flex-wrap: wrap;时才有效果。 */
+      /* align-self: baseline; */
+    }
+    .dv2{
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      line-height: 50px;
+      flex: 1 1 auto;
+    }
+    .dv3{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      line-height: 50px;
+      flex: 1 1 auto;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="dv1">1</div>
+  <div class="dv2">2</div>
+  <div class="dv3">3</div>
+  <div class="dv3">3</div>
+  <div class="dv3">3</div>
+  <div class="dv3">3</div>
+  <div class="dv3">3</div>
+  <div class="dv3">3</div>
+  <div class="dv3">3</div>
+</div>
+
+</body>
+</html>
